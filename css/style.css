@@ -1,0 +1,292 @@
+
+/* The Little Pink Café - Main Styles */
+
+:root {
+    --pink: #f4b8cb;
+    --light-pink: #fff0f5;
+    --dark-pink: #a35d73;
+    --cream: #fffaf7;
+    --text: #603d47;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: var(--light-pink);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 45px 20px;
+    background-color: var(--pink);
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+}
+
+/* Welcome Section */
+
+main {
+    padding: 70px 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    color: var(--dark-pink);
+}
+
+section p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* Menu Button */
+
+section a {
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: var(--dark-pink);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+section a:hover {
+    background-color: var(--text);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--pink);
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    main {
+        padding: 45px 20px;
+    }
+}
+
+/* Beautiful Homepage Image */
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(163, 93, 115, 0.12);
+}
+
+/* Compact Homepage Layout */
+
+header {
+    padding: 22px 20px;
+}
+
+header h1 {
+    margin: 0 0 5px;
+    font-size: 36px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    padding: 25px 20px;
+}
+
+section h2 {
+    font-size: 30px;
+    margin: 0 0 15px;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
+    margin: 15px auto;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(163, 93, 115, 0.12);
+}
+
+section p {
+    font-size: 16px;
+    margin: 12px auto 18px;
+}
+
+section a {
+    padding: 11px 25px;
+}
+
+footer {
+    padding: 12px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .hero-image {
+        height: 220px;
+    }
+}
+
+/* Show the complete homepage image */
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+    object-fit: contain;
+    margin: 12px auto;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(163, 93, 115, 0.12);
+}
+
+/* Little Pink Cafe Menu */
+
+.menu-section {
+    max-width: 850px;
+    margin: 35px auto;
+    text-align: center;
+}
+
+.cafe-menu {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fffaf7;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(163, 93, 115, 0.12);
+}
+
+.cafe-menu th {
+    background-color: #a35d73;
+    color: white;
+    padding: 17px;
+}
+
+.cafe-menu td {
+    padding: 16px;
+    border-bottom: 1px solid #f4b8cb;
+}
+
+.cafe-menu tbody tr:hover {
+    background-color: #fff0f5;
+}
+
+.menu-note {
+    background-color: #f4b8cb;
+    color: #603d47;
+    font-style: italic;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .cafe-menu th,
+    .cafe-menu td {
+        padding: 10px 6px;
+        font-size: 13px;
+    }
+}
+
+/* Navigation Bar */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    padding: 16px 20px;
+    background-color: #fffaf7;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #a35d73;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #fff0f5;
+}
+
+.navbar a.active {
+    background-color: #a35d73;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        gap: 8px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+}
+
+/* Homepage Description */
+
+section > p {
+    max-width: 620px;
+    margin: 12px auto 18px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
