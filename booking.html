@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script>
+    if (localStorage.getItem("cafeTheme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+    }
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table | The Little Pink Café</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html" class="active">Book a Table</a>
+
+<button id="theme-toggle" type="button">🌙 Dark Mode</button>
+
+    </nav>
+
+    <header>
+        <h1>A Little Table, Just for You ♡</h1>
+        <p>Reserve your cozy corner and let the daydreams begin.</p>
+    </header>
+
+    <main>
+        <section class="booking-section">
+            <h2>Let's Make a Date! ♡</h2>
+            <p>Fill in your details to request a reservation.</p>
+
+            <form class="booking-form" id="booking-form">
+            
+                <label for="guest-name">Your Name</label>
+                <input type="text" id="guest-name"
+                       placeholder="Your lovely name" required>
+
+                <label for="guest-email">Email Address</label>
+                <input type="email" id="guest-email"
+                       placeholder="you@example.com" required>
+
+                <label for="guest-phone">Phone Number</label>
+                <input type="tel" id="guest-phone"
+                       placeholder="Your phone number" required>
+
+                <label for="booking-date">Choose a Date</label>
+                <input type="date" id="booking-date" required>
+
+                <label for="booking-time">Choose a Time</label>
+                <input type="time" id="booking-time" required>
+
+                <label for="guest-count">Number of Guests</label>
+                <input type="number" id="guest-count"
+                       min="1" max="12" value="2" required>
+
+                <label for="occasion">Special Occasion</label>
+                <select id="occasion">
+                    <option value="none">Just a cozy café date</option>
+                    <option value="birthday">Birthday</option>
+                    <option value="anniversary">Anniversary</option>
+                    <option value="other">Something special!</option>
+                </select>
+
+                <label for="requests">Any Special Requests?</label>
+                <textarea id="requests" rows="4"
+                          placeholder="Tell us your little wishes..."></textarea>
+
+                <button type="submit">Request My Table ♡</button>
+            </form>
+            <p id="booking-message" aria-live="polite"></p>
+        </section>
+
+<section class="location-section">
+    <h2>Find Our Little Pink Corner ♡</h2>
+    <p>Come for the coffee, stay for the memories.</p>
+
+    <iframe
+        src="https://www.google.com/maps?q=Kota,Rajasthan&output=embed"
+        width="100%"
+        height="350"
+        style="border:0; border-radius:20px;"
+        loading="lazy"
+        title="Our café location">
+    </iframe>
+</section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Little Pink Café. Made with love ♡</p>
+    </footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
