@@ -3,6 +3,26 @@
 
 A dreamy, pastel-pink, multi-page café website created as a Web Development college assignment.
 
+
+## 🌸 Website Preview
+
+![The Little Pink Café Homepage](screenshots/homepage.png)
+
+### 🍓 Our Menu
+
+![The Little Pink Café Menu](screenshots/menu.png)
+
+### 🌷 Gallery Page
+
+![The Little Pink Café Gallery](screenshots/gallery.png)
+
+### 💌 Book a Table
+
+![The Little Pink Café Booking Page](screenshots/booking.png)
+
+
+
+
 ## About the Project
 The Little Pink Café is a cozy virtual café experience featuring a menu, photo gallery, and table booking form.
 

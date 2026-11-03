@@ -614,4 +614,100 @@ body.dark-mode table td {
     }
 }
 
+/* Café Video Section */
+.cafe-video {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cafe-video h2 {
+    margin-bottom: 12px;
+}
+
+.cafe-video p {
+    margin-bottom: 25px;
+}
+
+.cafe-video video {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(90, 50, 65, 0.15);
+}
+
+/* Daily Specials Section */
+.daily-specials {
+    text-align: center;
+    padding: 55px 20px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.daily-specials h2 {
+    color: #a65d79;
+    margin-bottom: 12px;
+}
+
+.special-days {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 28px 0;
+}
+
+.special-days button {
+    background: #f8dce6;
+    color: #78465a;
+    border: 1px solid #eab7c9;
+    border-radius: 25px;
+    padding: 12px 17px;
+    font: inherit;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.special-days button:hover,
+.special-days button.active {
+    background: #a65d79;
+    color: white;
+}
+
+.special-card {
+    background: #fff7fa;
+    border: 1px solid #f0cfdb;
+    border-radius: 20px;
+    padding: 28px 20px;
+    max-width: 440px;
+    margin: 0 auto;
+    box-shadow: 0 8px 24px rgba(150, 80, 110, 0.08);
+}
+
+.special-card h3 {
+    color: #a65d79;
+    margin-bottom: 12px;
+}
+
+.special-card p {
+    margin: 8px 0;
+}
+
+/* Dark Mode */
+.dark-mode .special-card {
+    background: #34232d;
+    border-color: #694558;
+}
+
+.dark-mode .special-card p {
+    color: #f9e4ec;
+}
+
+/* Daily Specials Heading - Dark Mode */
+.dark-mode .special-card h3 {
+    color: #f5bfd2;
+}
+
 

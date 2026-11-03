@@ -81,3 +81,46 @@ if (themeButton) {
         updateThemeButton();
     });
 }
+
+/* Daily Café Specials */
+const dailySpecials = {
+    0: { name: "Slow Sunday ♡", item: "Butter Croissant", price: "₹159" },
+    1: { name: "Pink Monday ♡", item: "Pink Vanilla Latte", price: "₹189" },
+    2: { name: "Treat Tuesday ♡", item: "Chocolate Brownie", price: "₹189" },
+    3: { name: "Waffle Wednesday ♡", item: "Nutella Waffles", price: "₹269" },
+    4: { name: "Thirsty Thursday ♡", item: "Iced Caramel Coffee", price: "₹199" },
+    5: { name: "Sweet Friday ♡", item: "Strawberry Shortcake", price: "₹259" },
+    6: { name: "Pancake Saturday ♡", item: "Strawberry Pancakes", price: "₹249" }
+};
+
+const dayButtons = document.querySelectorAll(".special-days button");
+const specialName = document.getElementById("special-name");
+const specialItem = document.getElementById("special-item");
+const specialPrice = document.getElementById("special-price");
+
+function showDailySpecial(day) {
+    if (!specialName || !specialItem || !specialPrice) return;
+
+    const special = dailySpecials[day];
+
+    specialName.textContent = special.name;
+    specialItem.textContent = special.item;
+    specialPrice.textContent = special.price;
+
+    dayButtons.forEach(button => {
+        button.classList.toggle(
+            "active",
+            Number(button.dataset.day) === day
+        );
+    });
+}
+
+if (specialName) {
+    showDailySpecial(new Date().getDay());
+
+    dayButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            showDailySpecial(Number(button.dataset.day));
+        });
+    });
+}
