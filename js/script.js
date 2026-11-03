@@ -124,3 +124,24 @@ if (specialName) {
         });
     });
 }
+// Back to Top Button
+const backToTopButton = document.createElement("button");
+
+backToTopButton.textContent = "↑";
+backToTopButton.setAttribute("aria-label", "Back to top");
+backToTopButton.title = "Back to Top";
+backToTopButton.className = "back-to-top";
+
+document.body.appendChild(backToTopButton);
+
+window.addEventListener("scroll", () => {
+  backToTopButton.style.display =
+    window.scrollY > 300 ? "block" : "none";
+});
+
+backToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});

@@ -709,5 +709,31 @@ body.dark-mode table td {
 .dark-mode .special-card h3 {
     color: #f5bfd2;
 }
+/* Back to Top Button */
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #b05c7a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+}
 
+.back-to-top:hover {
+  background-color: #8e4561;
+}
+
+.back-to-top:focus-visible {
+  outline: 3px solid #47303b;
+  outline-offset: 3px;
+}
 
