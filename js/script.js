@@ -145,3 +145,72 @@ backToTopButton.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+// Menu Search Feature
+const menuSearch = document.getElementById("menuSearch");
+const menuTable = document.querySelector(".cafe-menu");
+
+if (menuSearch && menuTable) {
+  const menuRows = Array.from(
+    menuTable.querySelectorAll("tbody tr")
+  );
+
+  // Remember the category for each food item
+  let currentCategory = "";
+
+  const items = menuRows
+    .filter(row => row.cells.length >= 2)
+    .map(row => {
+      const categoryCell = row.querySelector("td[rowspan]");
+
+      if (categoryCell) {
+        currentCategory = categoryCell.textContent.trim();
+      }
+
+      return {
+        row,
+        category: currentCategory,
+        foodName: categoryCell
+          ? row.cells[1].textContent.trim()
+          : row.cells[0].textContent.trim(),
+        categoryCell
+      };
+    });
+
+  menuSearch.addEventListener("input", () => {
+    const searchText = menuSearch.value.toLowerCase().trim();
+
+    items.forEach(item => {
+      const matches = item.foodName
+        .toLowerCase()
+        .includes(searchText);
+
+      item.row.style.display = matches ? "" : "none";
+    });
+
+    // Keep category labels aligned with visible food items
+    const categories = [...new Set(items.map(item => item.category))];
+
+    categories.forEach(category => {
+      const group = items.filter(item => item.category === category);
+      const visible = group.filter(item => item.row.style.display !== "none");
+
+      const originalCell = group[0].categoryCell;
+
+      if (!originalCell) return;
+
+      // Restore the category cell to its original row
+      group[0].row.insertBefore(originalCell, group[0].row.firstChild);
+
+      originalCell.rowSpan = group.length;
+
+      if (visible.length > 0) {
+        visible[0].row.insertBefore(
+          originalCell,
+          visible[0].row.firstChild
+        );
+        originalCell.rowSpan = visible.length;
+      }
+    });
+  });
+}
