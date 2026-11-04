@@ -3,6 +3,10 @@
 
 A dreamy, pastel-pink, multi-page café website created as a Web Development college assignment.
 
+## 🌐 Live Website
+
+[Visit The Little Pink Café](https://the-little-pink-cafe.netlify.app)
+
 
 ## 🌸 Website Preview
 
